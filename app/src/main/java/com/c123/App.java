@@ -10,7 +10,6 @@ import io.vertx.core.http.HttpServerOptions;
 import io.vertx.core.impl.VertxBuilder;
 import io.vertx.core.json.JsonObject;
 import io.vertx.core.net.JksOptions;
-import io.vertx.core.net.SSLEngineOptions;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.handler.BodyHandler;
 import org.slf4j.Logger;
