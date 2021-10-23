@@ -73,7 +73,9 @@ public class App {
                     JsonObject json = context.getBodyAsJson();
                     User user = gson.fromJson(json.encode(), User.class);
                     log.debug(user.toString());
-                    context.response().end("{\"msg\":\"I'm healthy\"}");
+                    context.response()
+                            .putHeader(HttpHeaders.CONTENT_TYPE, "application/json")
+                            .end(json.encode());
                 })
                 .failureHandler(ctx -> System.out.println("FAILURE"))
                 .method(HttpMethod.POST)
