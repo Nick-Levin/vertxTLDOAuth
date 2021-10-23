@@ -1,0 +1,28 @@
+plugins {
+    id 'application'
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.vertx:vertx-web:4.1.5'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    implementation 'ch.qos.logback:logback-classic:1.2.6'
+    implementation 'ch.qos.logback:logback-core:1.2.6'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'com.zaxxer:HikariCP:5.0.0'
+    implementation 'mysql:mysql-connector-java:8.0.27'
+    implementation 'com.auth0:java-jwt:3.18.2'
+}
+
+application {
+    mainClass = 'com.c123.App'
+}
